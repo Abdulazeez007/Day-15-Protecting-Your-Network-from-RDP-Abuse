@@ -15,12 +15,19 @@ One of the most dangerous ways attackers compromise a network is through an expo
 
 Once inside the network, attackers can perform credential dumping to obtain more valid login information from other machines. This allows them to move laterally across the network using RDP and potentially escalate their privileges, bringing them closer to their malicious objectives, such as data exfiltration or ransomware deployment.
 
+![Alt text](https://raw.githubusercontent.com/Virus192/Day-15-Protecting-Your-Network-from-RDP-Abuse/refs/heads/main/Images/photo_5999014176942572321_w.jpg)
+
 ## Finding Exposed RDP Services
 So, how do you find servers with exposed RDP services to ensure they are protected? There are two useful tools: Shodan and Censys.
 
 - **Shodan:** Shodan is a search engine for internet-connected devices. To find exposed RDP services, simply create an account, log in, and search for `port:3389`. Shodan will display a list of IP addresses with RDP running on the default port. It’s essential to ask, “Should this server have RDP exposed?” If not, consider disabling it or restricting access via a VPN.
 
+  ![Alt text](https://raw.githubusercontent.com/Virus192/Day-15-Protecting-Your-Network-from-RDP-Abuse/refs/heads/main/Images/photo_5999014176942572320_w.jpg)
+
 - **Censys:** Similar to Shodan, Censys allows you to search for devices with open ports. Simply search for `3389`, and you’ll see a list of endpoints with that port exposed. You can further refine your search to focus specifically on RDP services.
+
+  ![Alt text](https://raw.githubusercontent.com/Virus192/Day-15-Protecting-Your-Network-from-RDP-Abuse/refs/heads/main/Images/photo_5999014176942572317_w.jpg)
+
 
 By regularly using these tools, you can proactively identify exposed services and take corrective action to reduce your attack surface.
 
